@@ -6,7 +6,6 @@ public class Brick : MonoBehaviour
     [SerializeField] SpriteRenderer _sprite;
     [SerializeField] Color _color;
     [SerializeField] int _hp = 1;
-    [SerializeField] int _armor = 0;
     [SerializeField] float _dropChance = 0.15f; // 15%
 
     Collider2D _collider;
@@ -23,7 +22,6 @@ public class Brick : MonoBehaviour
         {
             _color = _brickStats.Color;
             _hp = _brickStats.Hp;
-            _armor = _brickStats.Armor;
             _dropChance = _brickStats.DropChance;
             if (_brickStats.Sprite != null) _sprite.sprite = _brickStats.Sprite;
             _sprite.color = _color;
@@ -39,8 +37,15 @@ public class Brick : MonoBehaviour
             // Damage
             _hp -= ball.Damage;
 
-            // Piercing > Hp
-            if (ball.CurrentPiercing > 0) ball.PierceBrick();
+            // Pierce > Hp else
+            if (ball.CurrentPiercing > 0 && _hp <= 0)
+            {
+                ball.PierceBrick();
+            }
+            else
+            {
+                ball.StopPiercing();
+            }
 
             CheckDestroy();
         }

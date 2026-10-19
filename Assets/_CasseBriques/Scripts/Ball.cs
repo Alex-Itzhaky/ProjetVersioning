@@ -49,6 +49,7 @@ public class Ball : MonoBehaviour
         _rb.linearVelocity = _savedVelocity;
         _currentPiercing--;
     }
+    public void StopPiercing() => _currentPiercing = 0;
 
     // Call it when collide with Plateform
     public void ResetPiercing()
