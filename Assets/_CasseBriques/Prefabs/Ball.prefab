@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5683833324013482785}
   - component: {fileID: 2828053504641216229}
   - component: {fileID: 222300635500572408}
+  - component: {fileID: -4563673352612013093}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -169,3 +170,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709fec533aa3311458ee7f50b1e7ffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
+  _ballData: {fileID: 0}
+  _sprite: {fileID: 0}
+  _color: {r: 0, g: 0, b: 0, a: 0}
+  _baseSpeed: 5
+  _damage: 1
+  _piercing: 0
+--- !u!114 &-4563673352612013093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3004333880723670072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe380a925cc4b3458be93dbd3e75e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BallSpeedIncreaser
+  _hitAddSpeed: 0
+  _hitMultiplier: 1
+  _maxSpeed: 16
