@@ -3404,6 +3404,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9134530327050306129, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
+      propertyPath: _hp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9134530327050306129, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
+      propertyPath: EnableHP
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4563673352612013093, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3419,6 +3427,10 @@ PrefabInstance:
     - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
       propertyPath: _damage
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
+      propertyPath: EnableHP
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
       propertyPath: _color.a
@@ -3443,7 +3455,7 @@ PrefabInstance:
     - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
       propertyPath: _ballData
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 1c39bc2c932fbbf438304d3c96a745b4, type: 2}
     - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
       propertyPath: ifNoBallData
       value: 0
