@@ -27,6 +27,10 @@ public class Ball : MonoBehaviour
     int _currentPiercing = 0;
     Vector2 _savedVelocity; // Pierce through object
 
+    [Header("Others")]
+    [MinValue(0)]
+    [SerializeField] int _startAngle = 40;
+
 
     // Brick fetching data
     public int Damage => _damage;
@@ -60,8 +64,7 @@ public class Ball : MonoBehaviour
 
     private void LaunchBall()
     {
-        // Y +- 30°
-        float randomAngleDeg = Random.Range(-30f, 30f);
+        float randomAngleDeg = Random.Range(-_startAngle, _startAngle);
 
         Vector2 launchDirection = Quaternion.Euler(0f, 0f, randomAngleDeg) * Vector2.up;
 
