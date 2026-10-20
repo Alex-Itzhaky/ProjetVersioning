@@ -27,6 +27,10 @@ public class BallData : ScriptableObject
     [SerializeField] int damage = 1;
     [MinValue(0)]
     [SerializeField] int piercing = 0;
+    [SerializeField] bool enableHP = false;
+    [EnableIf(nameof(enableHP))]
+    [MinValue(1)]
+    [SerializeField] int hp = 1;
 
 
 
@@ -37,7 +41,9 @@ public class BallData : ScriptableObject
     public Sprite Sprite => sprite;
     public Color Color => color;
 
-
+    // Ball plus
     public int Damage => damage;
     public int Piercing => piercing;
+    public bool EnableHP => enableHP;
+    public int Hp => hp;
 }

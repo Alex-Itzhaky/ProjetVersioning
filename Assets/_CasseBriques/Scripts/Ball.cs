@@ -27,6 +27,8 @@ public class Ball : MonoBehaviour
     int _currentPiercing = 0;
     Vector2 _savedVelocity; // Pierce through object
 
+
+    // Brick fetching data
     public int Damage => _damage;
     public int CurrentPiercing => _currentPiercing;
     public BallData BallData => _ballData; // Share to BallSpeedIncreaser.cs
