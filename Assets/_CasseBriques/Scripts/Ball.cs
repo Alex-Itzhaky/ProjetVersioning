@@ -1,5 +1,6 @@
 using UnityEngine;
 using NaughtyAttributes;
+using System;
 
 public class Ball : MonoBehaviour
 {
@@ -37,6 +38,19 @@ public class Ball : MonoBehaviour
     public int CurrentPiercing => _currentPiercing;
     public BallData BallData => _ballData; // Share to BallSpeedIncreaser.cs
 
+    public static event Action<Ball> OnBallSpawned;
+    public static event Action<Ball> OnBallDied;
+
+    void OnEnable()
+    {
+        OnBallSpawned?.Invoke(this);
+    }
+
+    void OnDisable()
+    {
+        OnBallDied?.Invoke(this);
+    }
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -64,7 +78,7 @@ public class Ball : MonoBehaviour
 
     private void LaunchBall()
     {
-        float randomAngleDeg = Random.Range(-_startAngle, _startAngle);
+        float randomAngleDeg = UnityEngine.Random.Range(-_startAngle, _startAngle);
 
         Vector2 launchDirection = Quaternion.Euler(0f, 0f, randomAngleDeg) * Vector2.up;
 

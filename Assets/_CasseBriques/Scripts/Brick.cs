@@ -1,5 +1,6 @@
 using UnityEngine;
 using NaughtyAttributes;
+using System;
 
 public class Brick : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Brick : MonoBehaviour
 
     Collider2D _collider;
 
+    public static event Action<Brick> OnBrickDestroyed;
 
 
     void Start()
@@ -64,6 +66,7 @@ public class Brick : MonoBehaviour
         if (_hp <= 0)
         {
             Destroy(gameObject);
+            OnBrickDestroyed?.Invoke(this); // Tell to WinChecker to remove from list
         }
     }
 }

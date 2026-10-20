@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BallData
   baseSpeed: 5
   hitAddSpeed: 0
-  hitMultiplySpeed: 1
-  maxSpeed: 16
+  hitMultiplySpeed: 1.5
+  maxSpeed: 30
   sprite: {fileID: 0}
   color: {r: 255, g: 255, b: 255, a: 255}
   damage: 5
