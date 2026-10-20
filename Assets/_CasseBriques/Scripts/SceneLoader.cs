@@ -5,9 +5,15 @@ using NaughtyAttributes;
 
 public class SceneLoader : MonoBehaviour
 {
+    [DisableIf(nameof(HasStuffToShow))]
     public bool quitGame = false;
-    [Dropdown("SceneValues"), DisableIf(nameof(quitGame))]
+    [Dropdown("SceneValues"), DisableIf(nameof(ShouldDisableSceneValue))]
     public string sceneValue;
+    private bool HasStuffToShow => _showStuff != null;
+    private bool ShouldDisableSceneValue => quitGame || HasStuffToShow;
+    [DisableIf(nameof(quitGame))]
+    public GameObject _showStuff;
+
     private List<string> SceneValues
     {
         get
@@ -17,16 +23,31 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-
+    void Start()
+    {
+        if (_showStuff != null) _showStuff.SetActive(false);
+    }
     public void LoadScene()
     {
-        if (!quitGame)
+        if (!quitGame && !HasStuffToShow)
         {
             SceneManager.LoadScene(sceneValue);
         }
-        else
+        else if (!HasStuffToShow)
         {
             Application.Quit();
+        }
+        else
+        {
+            ShowTheStuff();
+        }
+    }
+
+    void ShowTheStuff()
+    {
+        if (_showStuff != null)
+        {
+            _showStuff.SetActive(true);
         }
     }
 }
