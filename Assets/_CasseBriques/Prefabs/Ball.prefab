@@ -172,8 +172,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ball
   _ballData: {fileID: 0}
   _sprite: {fileID: 0}
-  _color: {r: 0, g: 0, b: 0, a: 0}
+  _color: {r: 1, g: 1, b: 1, a: 1}
   _baseSpeed: 5
+  _maxSpeed: 16
   _damage: 1
   _piercing: 0
 --- !u!114 &-4563673352612013093
@@ -190,4 +191,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BallSpeedIncreaser
   _hitAddSpeed: 0
   _hitMultiplier: 1
-  _maxSpeed: 16

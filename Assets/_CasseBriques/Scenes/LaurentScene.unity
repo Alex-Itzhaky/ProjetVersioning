@@ -3404,13 +3404,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4563673352612013093, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4563673352612013093, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
+      propertyPath: _hitAddSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4563673352612013093, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
+      propertyPath: _hitMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
+      propertyPath: _damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
+      propertyPath: _color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
+      propertyPath: _color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
+      propertyPath: _color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
+      propertyPath: _color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
       propertyPath: ballData
       value: 
-      objectReference: {fileID: 11400000, guid: 1c39bc2c932fbbf438304d3c96a745b4, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
-      propertyPath: _piercing
-      value: 1
+      propertyPath: _ballData
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 222300635500572408, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
+      propertyPath: ifNoBallData
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 684183396138734834, guid: 093b4f239295aa342a19ad1be1c3ed5d, type: 3}
       propertyPath: m_LocalPosition.x

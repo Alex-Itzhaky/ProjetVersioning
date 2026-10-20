@@ -151,9 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e27ea1c2ec842944973239a318e0fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Brick
-  _brickStats: {fileID: 11400000, guid: da90aae823341654784050ecbe10bddf, type: 2}
+  _brickData: {fileID: 0}
   _sprite: {fileID: 0}
-  _color: {r: 0, g: 0, b: 0, a: 0}
+  _color: {r: 1, g: 1, b: 1, a: 1}
   _hp: 1
-  _armor: 0
   _dropChance: 0.15

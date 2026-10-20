@@ -1,11 +1,19 @@
 using UnityEngine;
+using NaughtyAttributes;
 
 public class Brick : MonoBehaviour
 {
-    [SerializeField] BrickData _brickStats;
+    [SerializeField] BrickData _brickData;
+    private bool HasBrickData => _brickData == null;
+    [ShowIf(nameof(HasBrickData))]
     [SerializeField] SpriteRenderer _sprite;
+    [ShowIf(nameof(HasBrickData))]
     [SerializeField] Color _color;
+    [ShowIf(nameof(HasBrickData))]
+    [MinValue(0)]
     [SerializeField] int _hp = 1;
+    [ShowIf(nameof(HasBrickData))]
+    [MinValue(0)]
     [SerializeField] float _dropChance = 0.15f; // 15%
 
     Collider2D _collider;
@@ -18,12 +26,12 @@ public class Brick : MonoBehaviour
         _sprite = GetComponent<SpriteRenderer>();
 
         // Replace data
-        if (_brickStats != null)
+        if (_brickData != null)
         {
-            _color = _brickStats.Color;
-            _hp = _brickStats.Hp;
-            _dropChance = _brickStats.DropChance;
-            if (_brickStats.Sprite != null) _sprite.sprite = _brickStats.Sprite;
+            _color = _brickData.Color;
+            _hp = _brickData.Hp;
+            _dropChance = _brickData.DropChance;
+            if (_brickData.Sprite != null) _sprite.sprite = _brickData.Sprite;
             _sprite.color = _color;
         }
     }
