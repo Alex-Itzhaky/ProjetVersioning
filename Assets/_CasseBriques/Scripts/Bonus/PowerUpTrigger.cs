@@ -1,6 +1,7 @@
 using UnityEngine;
 using NaughtyAttributes;
 using System;
+using UnityEngine.Events;
 
 public class PowerUpTrigger : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PowerUpTrigger : MonoBehaviour
     [SerializeField] private string _platformTag;
 
     public event Action OnBonusTrigger;
+    public UnityEvent OnPowerUpPickup;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,6 +19,7 @@ public class PowerUpTrigger : MonoBehaviour
             //Invoquer le pouvoir
             Debug.Log("touché");
             OnBonusTrigger?.Invoke();
+            OnPowerUpPickup?.Invoke();
             Destroy(transform.parent.gameObject);
         }
     }
