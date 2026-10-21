@@ -30,6 +30,7 @@ public class WinChecker : MonoBehaviour
         if (remainingBricks.Count == 0)
         {
             Debug.Log("Mambo ! You win");
+            Time.timeScale = 0.001f;
             if (winScreen != null) winScreen.SetActive(true);
         }
     }

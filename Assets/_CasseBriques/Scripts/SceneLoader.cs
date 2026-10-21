@@ -19,7 +19,7 @@ public class SceneLoader : MonoBehaviour
         get
         {
             return new List<string>()
-    { "MainMenu", "LaurentScene", "LouiseScene", "D", "E" };
+    { "MainMenu", "LaurentScene", "LouiseScene", "D", "SecretScene" };
         }
     }
 
@@ -29,9 +29,12 @@ public class SceneLoader : MonoBehaviour
     }
     public void LoadScene()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+
         if (!quitGame && !HasStuffToShow)
         {
             SceneManager.LoadScene(sceneValue);
+            Time.timeScale = 1f;
         }
         else if (!HasStuffToShow)
         {

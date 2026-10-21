@@ -40,7 +40,7 @@ public class GameOverChecker : MonoBehaviour
         if (activeBalls.Count == 0)
         {
             Debug.Log("The game is fk over, u so bad");
-            SceneManager.LoadScene("MainMenu");
+            Time.timeScale = 0.001f;
             if (loseScreen != null) loseScreen.SetActive(true);
         }
     }
