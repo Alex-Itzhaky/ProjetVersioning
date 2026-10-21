@@ -1,5 +1,6 @@
 using UnityEngine;
 using NaughtyAttributes;
+using System;
 
 public class Brick : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class Brick : MonoBehaviour
 
     Collider2D _collider;
 
-
+    public event Action OnBrickDestroyed;
 
     void Start()
     {
@@ -63,6 +64,7 @@ public class Brick : MonoBehaviour
     {
         if (_hp <= 0)
         {
+            OnBrickDestroyed?.Invoke();
             Destroy(gameObject);
         }
     }

@@ -1,16 +1,25 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class PowerUpEffect : MonoBehaviour
+public class PowerUpReferences
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    BallManager _ballManager;
+    ScaleChanger _scaleChanger;
 
-    // Update is called once per frame
-    void Update()
+    public BallManager BallManager => _ballManager;
+    public ScaleChanger ScaleChanger => _scaleChanger;
+    public PowerUpReferences(BallManager ballManager, ScaleChanger scaleChanger)
     {
-        
+        _ballManager = ballManager;
+        _scaleChanger = scaleChanger;
     }
+}
+
+public abstract class PowerUpEffect : ScriptableObject
+{
+    [SerializeField] protected float duration;
+
+    public float Duration => duration;
+    public abstract void ApplyEffect(PowerUpReferences references);
+    public virtual void RemoveEffect(PowerUpReferences references) { }
 }
