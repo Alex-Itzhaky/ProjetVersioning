@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BrickData
   sprite: {fileID: 0}
   color: {r: 0.6509434, g: 0.08290317, b: 0.08290317, a: 1}
-  hp: 2
-  armor: 0
+  hp: 1
   dropChance: 0

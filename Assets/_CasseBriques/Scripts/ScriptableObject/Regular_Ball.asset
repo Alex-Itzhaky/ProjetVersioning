@@ -18,7 +18,7 @@ MonoBehaviour:
   maxSpeed: 30
   sprite: {fileID: 0}
   color: {r: 255, g: 255, b: 255, a: 255}
-  damage: 5
+  damage: 1
   piercing: 0
   enableHP: 0
   hp: 1
