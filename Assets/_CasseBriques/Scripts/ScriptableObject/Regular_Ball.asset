@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f74469bb7f9b14e48b429eb7bc4b2092, type: 3}
   m_Name: Regular_Ball
   m_EditorClassIdentifier: Assembly-CSharp::BallData
-  baseSpeed: 5
-  hitAddSpeed: 0
-  hitMultiplySpeed: 1.5
-  maxSpeed: 30
+  baseSpeed: 4
+  hitAddSpeed: 1
+  hitMultiplySpeed: 1
+  maxSpeed: 10
   sprite: {fileID: 0}
   color: {r: 255, g: 255, b: 255, a: 255}
   damage: 1
