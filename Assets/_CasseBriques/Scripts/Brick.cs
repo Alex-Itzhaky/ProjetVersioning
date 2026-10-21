@@ -65,8 +65,22 @@ public class Brick : MonoBehaviour
     {
         if (_hp <= 0)
         {
-            Destroy(gameObject);
+            GamblingDrop();
             OnBrickDestroyed?.Invoke(this); // Tell to WinChecker to remove from list
+            Destroy(gameObject);
+        }
+    }
+
+    public void GamblingDrop()
+    {
+        float result = UnityEngine.Random.value;
+        if (result < _dropChance)
+        {
+            Debug.Log($"Dropped");
+        }
+        else
+        {
+            Debug.Log("Mambo :(");
         }
     }
 }

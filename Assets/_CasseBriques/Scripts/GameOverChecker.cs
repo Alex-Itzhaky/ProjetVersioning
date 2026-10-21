@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverChecker : MonoBehaviour
 {
@@ -39,6 +40,7 @@ public class GameOverChecker : MonoBehaviour
         if (activeBalls.Count == 0)
         {
             Debug.Log("The game is fk over, u so bad");
+            SceneManager.LoadScene("MainMenu");
             if (loseScreen != null) loseScreen.SetActive(true);
         }
     }
