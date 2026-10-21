@@ -17,9 +17,9 @@ public class PowerUpReferences
 
 public abstract class PowerUpEffect : ScriptableObject
 {
-    [SerializeField] protected float duration;
+    [SerializeField] protected float _duration;
 
-    public float Duration => duration;
+    public float Duration => _duration;
     public abstract void ApplyEffect(PowerUpReferences references);
     public virtual void RemoveEffect(PowerUpReferences references) { }
 }

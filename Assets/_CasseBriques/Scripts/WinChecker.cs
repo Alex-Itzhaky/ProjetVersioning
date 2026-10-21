@@ -8,14 +8,14 @@ public class WinChecker : MonoBehaviour
 
     [SerializeField] GameObject winScreen;
 
-    void OnEnable()
-    {
-        Brick.OnBrickDestroyed += HandleBrickDestroyed;
-    }
-    void OnDisable()
-    {
-        Brick.OnBrickDestroyed -= HandleBrickDestroyed;
-    }
+    //void OnEnable()
+    //{
+    //    Brick.OnBrickDestroyed += HandleBrickDestroyed;
+    //}
+    //void OnDisable()
+    //{
+    //    Brick.OnBrickDestroyed -= HandleBrickDestroyed;
+    //}
 
     void Start()
     {
