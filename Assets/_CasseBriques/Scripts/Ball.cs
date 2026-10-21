@@ -38,19 +38,6 @@ public class Ball : MonoBehaviour
     public int CurrentPiercing => _currentPiercing;
     public BallData BallData => _ballData; // Share to BallSpeedIncreaser.cs
 
-    public static event Action<Ball> OnBallSpawned;
-    public static event Action<Ball> OnBallDied;
-
-    void OnEnable()
-    {
-        OnBallSpawned?.Invoke(this);
-    }
-
-    void OnDisable()
-    {
-        OnBallDied?.Invoke(this);
-    }
-
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();

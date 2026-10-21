@@ -39,6 +39,6 @@ public class BallManager : MonoBehaviour
     {
         GameObject ball = Instantiate(_ballPrefab, startPos, Quaternion.identity);
         ball.GetComponent<Rigidbody2D>().linearVelocity = startVelocity;
-        AddBall(ball.GetComponent<Ball>());        
+        AddBall(ball.GetComponent<Ball>());
     }
 }
