@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpData
   _icon: {fileID: 0}
-  _effect: {fileID: 11400000, guid: 9fa57db99b125714e90d11f40b5780ba, type: 2}
+  _effect: {fileID: 11400000, guid: d08c1239e7072b64181259b6c78df0c1, type: 2}
