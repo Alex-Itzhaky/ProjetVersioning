@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class WinChecker : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class WinChecker : MonoBehaviour
     //    Brick.OnBrickDestroyed -= HandleBrickDestroyed;
     //}
 
+    public UnityEvent OnWin;
+
     void Start()
     {
         remainingBricks.AddRange(FindObjectsByType<Brick>(FindObjectsSortMode.None));
@@ -31,6 +34,7 @@ public class WinChecker : MonoBehaviour
         {
             Debug.Log("Mambo ! You win");
             Time.timeScale = 0.001f;
+            OnWin?.Invoke();
             if (winScreen != null) winScreen.SetActive(true);
         }
     }

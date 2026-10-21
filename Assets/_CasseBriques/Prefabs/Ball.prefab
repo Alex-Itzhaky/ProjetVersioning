@@ -178,6 +178,7 @@ MonoBehaviour:
   _maxSpeed: 16
   _damage: 1
   _piercing: 1
+  _startAngle: 40
 --- !u!114 &-4563673352612013093
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,9 +1,10 @@
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioManager Instance { get; private set; }
+    public static AudioManager Instance { get; private set; }
 
     [RequiredType(typeof(AudioSource))]
     [SerializeField] private AudioSource _audioSourcePrefab;
@@ -19,6 +20,16 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void PlaySoundFXClip(AudioClip audioClip)
+    {
+        AudioSource audioSource = Instantiate(_audioSourcePrefab, transform);
+        audioSource.clip = audioClip;
+
+        audioSource.Play();
+        float clipLength = audioSource.clip.length;
+        Destroy(audioSource.gameObject, clipLength);
     }
 
     public void PlaySoundFXClip(AudioClip audioClip, float volume = 0.8f, float pitchVariance = 0f)
