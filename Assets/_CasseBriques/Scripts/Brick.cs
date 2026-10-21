@@ -19,8 +19,7 @@ public class Brick : MonoBehaviour
 
     Collider2D _collider;
 
-    public static event Action<Brick> OnBrickDestroyed;
-
+    public event Action OnBrickDestroyed;
 
     void Start()
     {
@@ -66,7 +65,7 @@ public class Brick : MonoBehaviour
         if (_hp <= 0)
         {
             GamblingDrop();
-            OnBrickDestroyed?.Invoke(this); // Tell to WinChecker to remove from list
+            OnBrickDestroyed?.Invoke(); // Tell to WinChecker to remove from list
             Destroy(gameObject);
         }
     }
