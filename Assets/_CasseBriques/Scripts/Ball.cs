@@ -1,5 +1,6 @@
 using UnityEngine;
 using NaughtyAttributes;
+using System;
 
 public class Ball : MonoBehaviour
 {
@@ -27,11 +28,28 @@ public class Ball : MonoBehaviour
     int _currentPiercing = 0;
     Vector2 _savedVelocity; // Pierce through object
 
+    [Header("Others")]
+    [MinValue(0)]
+    [SerializeField] int _startAngle = 40;
+
 
     // Brick fetching data
     public int Damage => _damage;
     public int CurrentPiercing => _currentPiercing;
     public BallData BallData => _ballData; // Share to BallSpeedIncreaser.cs
+
+    public static event Action<Ball> OnBallSpawned;
+    public static event Action<Ball> OnBallDied;
+
+    void OnEnable()
+    {
+        OnBallSpawned?.Invoke(this);
+    }
+
+    void OnDisable()
+    {
+        OnBallDied?.Invoke(this);
+    }
 
     void Start()
     {
@@ -60,8 +78,7 @@ public class Ball : MonoBehaviour
 
     private void LaunchBall()
     {
-        // Y +- 30°
-        float randomAngleDeg = Random.Range(-30f, 30f);
+        float randomAngleDeg = UnityEngine.Random.Range(-_startAngle, _startAngle);
 
         Vector2 launchDirection = Quaternion.Euler(0f, 0f, randomAngleDeg) * Vector2.up;
 
