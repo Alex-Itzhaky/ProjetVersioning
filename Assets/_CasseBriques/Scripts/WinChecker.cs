@@ -6,7 +6,6 @@ public class WinChecker : MonoBehaviour
 {
     // Listen to walls, walls speak.
     [SerializeField] GameObject winScreen;
-    [SerializeField] Collider2D winBox;
 
     public UnityEvent OnWin;
 
