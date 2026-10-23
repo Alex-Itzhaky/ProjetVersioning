@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4563673352612013093}
   - component: {fileID: -9134530327050306129}
   - component: {fileID: 5597120610740413222}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5483112
+  m_Radius: 0.29736352
 --- !u!50 &2828053504641216229
 Rigidbody2D:
   serializedVersion: 5

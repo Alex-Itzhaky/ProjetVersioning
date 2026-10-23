@@ -14,9 +14,19 @@ public class DamageFlash : MonoBehaviour
 
     private void Awake()
     {
-        _spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        _spriteRenderers = GetComponents<SpriteRenderer>();
         _materials = new Material[_spriteRenderers.Length];
         for (int i = 0;  i < _spriteRenderers.Length; i++)
+        {
+            _materials[i] = _spriteRenderers[i].material;
+        }
+    }
+
+    private void Reset()
+    {
+        _spriteRenderers = GetComponents<SpriteRenderer>();
+        _materials = new Material[_spriteRenderers.Length];
+        for (int i = 0; i < _spriteRenderers.Length; i++)
         {
             _materials[i] = _spriteRenderers[i].material;
         }

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_CasseBriques/Scenes/MainMenu but with skin.unity
+    guid: af470f848d132034bad154ea6b0bde81
+  - enabled: 0
     path: Assets/_CasseBriques/Scenes/MainMenu.unity
     guid: ee27ed328af9bd34b9efda97f9f4ec1c
   - enabled: 0

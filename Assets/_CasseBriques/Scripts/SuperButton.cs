@@ -7,6 +7,7 @@ public class SceneLoader : MonoBehaviour
 {
     [DisableIf(nameof(HasStuff))]
     public bool quitGame = false;
+    [Scene]
     [Dropdown("SceneValues"), DisableIf(nameof(ShouldDisableSceneValue))]
     public string sceneValue;
     private bool HasStuff => _showStuff != null || _closeStuff != null;
@@ -19,15 +20,6 @@ public class SceneLoader : MonoBehaviour
 
     private bool DisableShowStuff => quitGame || _closeStuff != null;
     private bool DisableCloseStuff => quitGame || _showStuff != null;
-
-    private List<string> SceneValues
-    {
-        get
-        {
-            return new List<string>()
-    { "MainMenu", "LaurentScene", "LouiseScene", "D", "SecretScene" };
-        }
-    }
 
     void Start()
     {

@@ -30,6 +30,7 @@ public class Brick : MonoBehaviour
 
     public event Action OnBrickDestroyed;
     public UnityEvent OnBrickDestruction;
+    public UnityEvent OnBrickDamaged;
 
     void Start()
     {
@@ -72,7 +73,7 @@ public class Brick : MonoBehaviour
 
             // Take damage and check sprite
             TakeDamage(ball.Damage);
-
+            OnBrickDamaged?.Invoke();
             // Pierce > Hp else
             if (ball.CurrentPiercing > 0 && _hp <= 0)
             {

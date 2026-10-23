@@ -2594,6 +2594,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2632,7 +2633,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -2719,6 +2720,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 8891446e53b38bb4ab2c4112b5e5c641, type: 2}
 --- !u!1001 &553487624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3277,7 +3295,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.53, y: -0.24, z: 0}
-  m_LocalScale: {x: 2.413546, y: 2.413546, z: 2.413546}
+  m_LocalScale: {x: 2.4630237, y: 2.4630237, z: 2.4630237}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -7929,7 +7947,7 @@ Transform:
   m_GameObject: {fileID: 1350780278}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.99, z: 0}
+  m_LocalPosition: {x: 0, y: -5.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10466,6 +10484,10 @@ PrefabInstance:
       propertyPath: quitGame
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4330268205669508862, guid: 8c0c5fe1234687a4eac8705ac259ebc2, type: 3}
+      propertyPath: sceneValue
+      value: MainMenu but with skin
+      objectReference: {fileID: 0}
     - target: {fileID: 5509630493146751056, guid: 8c0c5fe1234687a4eac8705ac259ebc2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11658,7 +11680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4330268205669508862, guid: 8c0c5fe1234687a4eac8705ac259ebc2, type: 3}
       propertyPath: sceneValue
-      value: MainMenu
+      value: MainMenu but with skin
       objectReference: {fileID: 0}
     - target: {fileID: 5509630493146751056, guid: 8c0c5fe1234687a4eac8705ac259ebc2, type: 3}
       propertyPath: m_Pivot.x
