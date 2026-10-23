@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456b7081b6da90f42b9e7a535801d887, type: 3}
   m_Name: Screamer
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpData
-  _icon: {fileID: 0}
+  _icon: {fileID: -4704705909000966608, guid: ffa476079377b46469a1adc6761b7c7a, type: 3}
   _effect: {fileID: 11400000, guid: 813ad420e2ce08a49a9151db89674d7e, type: 2}

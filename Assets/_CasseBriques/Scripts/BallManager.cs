@@ -11,6 +11,7 @@ public class BallManager : MonoBehaviour
 
     [RequiredType(typeof(Ball), typeof(Rigidbody2D))]
     [SerializeField] private GameObject _ballPrefab;
+    [SerializeField] private Sprite _defaultSkin;
 
     public event Action OnEmptyBallRegistry;
 
@@ -39,6 +40,7 @@ public class BallManager : MonoBehaviour
     {
         GameObject ball = Instantiate(_ballPrefab, startPos, Quaternion.identity);
         ball.GetComponent<Rigidbody2D>().linearVelocity = startVelocity;
-        AddBall(ball.GetComponent<Ball>());        
+        ball.GetComponent<SpriteRenderer>().sprite = BallSelect.CurrentSkin != null ? BallSelect.CurrentSkin : _defaultSkin;
+        AddBall(ball.GetComponent<Ball>());
     }
 }

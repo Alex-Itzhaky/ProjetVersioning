@@ -50,6 +50,7 @@ public class PowerUpManager : MonoBehaviour
     {
         GameObject bonusInstance = Instantiate(_bonusPrefab, pos, Quaternion.identity);
         bonusInstance.GetComponent<PowerUpContainer>().Init(data, this);
+        bonusInstance.GetComponentInChildren<SpriteRenderer>().sprite = data.Icon;
     }
 
     public void ActivatePower(PowerUpEffect effect)
