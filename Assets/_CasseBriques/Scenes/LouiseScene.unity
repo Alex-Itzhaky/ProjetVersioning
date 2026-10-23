@@ -2525,8 +2525,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4864114224043345649, guid: 00991be9dc88e3e42b6d99dca9149552, type: 3}
       propertyPath: useSprite
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4864114224043345649, guid: 00991be9dc88e3e42b6d99dca9149552, type: 3}
+      propertyPath: _spriteFullHp
+      value: 
+      objectReference: {fileID: 21300000, guid: a9b7d9d4b3015364b971802d6b60ab24, type: 3}
     - target: {fileID: 5561221520948034166, guid: 00991be9dc88e3e42b6d99dca9149552, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -4922,7 +4926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameOverChecker
   loseScreen: {fileID: 0}
-  ballManager: {fileID: 0}
+  ballManager: {fileID: 2009005654}
   OnGameOver:
     m_PersistentCalls:
       m_Calls: []
@@ -8425,7 +8429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa1ed62186f07141a96697bdf83a7a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallKiller
-  ballManager: {fileID: 0}
+  ballManager: {fileID: 2009005654}
 --- !u!1001 &1649975200
 PrefabInstance:
   m_ObjectHideFlags: 0
