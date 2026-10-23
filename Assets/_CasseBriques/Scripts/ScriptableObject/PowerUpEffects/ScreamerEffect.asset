@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScreamerEffect
   _duration: 5
   _screamerPrefab: {fileID: 5502886815476394019, guid: 25c39b67ff7d8b24cb9faef8d8591f8b, type: 3}
-  _audioClip: {fileID: 0}
+  _audioClip: {fileID: 8300000, guid: 5c10300c6c4cf8149be855fb10de7035, type: 3}
   _strength: 3
   _vibrato: 20
   _randomness: 100

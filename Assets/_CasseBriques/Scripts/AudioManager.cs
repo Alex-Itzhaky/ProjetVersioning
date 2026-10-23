@@ -24,7 +24,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySoundFXClip(AudioClip audioClip)
     {
-        AudioSource audioSource = Instantiate(_audioSourcePrefab, transform);
+        AudioSource audioSource = Instantiate(_audioSourcePrefab);
         audioSource.clip = audioClip;
 
         audioSource.Play();
@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySoundFXClip(AudioClip audioClip, float volume = 0.8f, float pitchVariance = 0f)
     {
-        AudioSource audioSource = Instantiate(_audioSourcePrefab, transform);
+        AudioSource audioSource = Instantiate(_audioSourcePrefab);
         audioSource.clip = audioClip;
         audioSource.volume = volume;
 
@@ -49,13 +49,14 @@ public class AudioManager : MonoBehaviour
         Destroy(audioSource.gameObject, clipLength);
     }
 
-    public void PlayMusicClip(AudioClip audioClip, Transform spawnTransform, float volume = 1f, bool looping = true)
+    public void PlayMusicClip(AudioClip audioClip, float volume = 1f, bool looping = true)
     {
-        AudioSource audioSource = Instantiate(_audioSourcePrefab, transform);
+        AudioSource audioSource = Instantiate(_audioSourcePrefab);
         audioSource.clip = audioClip;
         audioSource.volume = volume;
         audioSource.loop = looping;
 
         audioSource.Play();
+        DontDestroyOnLoad(audioSource.gameObject);
     }
 }
