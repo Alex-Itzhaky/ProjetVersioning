@@ -8,6 +8,7 @@ public class ScaleChanger : MonoBehaviour
     [MinValue(0)]
     [SerializeField] private float _scaleTransitionTime;
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Transform _boxCollider;
 
     public float BaseScale => _baseScale;
     private void Start()
@@ -23,13 +24,16 @@ public class ScaleChanger : MonoBehaviour
     private IEnumerator UpdateScaleCoroutine(float scale)
     {
         Vector2 startScale = _spriteRenderer.size;
+        Vector3 startTrScale = _boxCollider.localScale;
         float elapsedTime = 0f;
         while (elapsedTime < _scaleTransitionTime)
         {
             _spriteRenderer.size = Vector2.Lerp(startScale, new Vector2(scale, _spriteRenderer.size.y), elapsedTime/_scaleTransitionTime);
+            transform.localScale = Vector3.Lerp(startTrScale, new Vector3(scale, 1, 1), elapsedTime / _scaleTransitionTime);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
         _spriteRenderer.size = new Vector2(scale, _spriteRenderer.size.y);
+        transform.localScale = new Vector3(scale, 1, 1);
     }
 }
