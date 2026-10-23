@@ -42,16 +42,19 @@ public class Brick : MonoBehaviour
             useSprite = _brickData.UseSprite;
             _hp = _brickData.Hp;
             _dropChance = _brickData.DropChance;
+            if (!useSprite)
+            {
+                _colorFullHp = _brickData.ColorFullHP;
+                _colorHalfHp = _brickData.ColorHalfHP;
+            }
             if (_brickData.SpriteFullHP != null && useSprite) _spriteFullHp = _brickData.SpriteFullHP;
             if (_brickData.SpriteHalfHP != null && useSprite) _spriteHalfHp = _brickData.SpriteHalfHP;
-            _colorFullHp = _brickData.ColorFullHP;
-            _colorHalfHp = _brickData.ColorHalfHP;
         }
 
         _halfHpValue = _hp / 2;
 
+        if (!useSprite) _sprite.color = _colorFullHp;
         if (_spriteFullHp) _sprite.sprite = _spriteFullHp;
-        _sprite.color = _colorFullHp;
 
         // Disable sprites
         if (!useSprite)
@@ -104,8 +107,8 @@ public class Brick : MonoBehaviour
     {
         if (_hp <= _halfHpValue)
         {
+            if (!useSprite) _sprite.color = _colorHalfHp;
             if (_spriteHalfHp != null) _sprite.sprite = _spriteHalfHp;
-            _sprite.color = _colorHalfHp;
         }
     }
 
