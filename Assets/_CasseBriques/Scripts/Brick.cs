@@ -10,9 +10,9 @@ public class Brick : MonoBehaviour
     [ShowIf(nameof(HasBrickData))]
     [SerializeField] bool useSprite;
     [ShowIf(nameof(HasBrickData)), EnableIf(nameof(useSprite))]
-    [SerializeField] SpriteRenderer _spriteFullHp;
+    [SerializeField] Sprite _spriteFullHp;
     [ShowIf(nameof(HasBrickData)), EnableIf(nameof(useSprite))]
-    [SerializeField] SpriteRenderer _spriteHalfHp;
+    [SerializeField] Sprite _spriteHalfHp;
     [ShowIf(nameof(HasBrickData)), DisableIf(nameof(useSprite))]
     [SerializeField] Color _colorFullHp = new Color(255, 255, 255, 255);
     [ShowIf(nameof(HasBrickData)), DisableIf(nameof(useSprite))]
@@ -42,15 +42,15 @@ public class Brick : MonoBehaviour
             useSprite = _brickData.UseSprite;
             _hp = _brickData.Hp;
             _dropChance = _brickData.DropChance;
-            if (_brickData.SpriteFullHP != null && useSprite) _spriteFullHp.sprite = _brickData.SpriteFullHP;
-            if (_brickData.SpriteHalfHP != null && useSprite) _spriteHalfHp.sprite = _brickData.SpriteHalfHP;
+            if (_brickData.SpriteFullHP != null && useSprite) _spriteFullHp = _brickData.SpriteFullHP;
+            if (_brickData.SpriteHalfHP != null && useSprite) _spriteHalfHp = _brickData.SpriteHalfHP;
             _colorFullHp = _brickData.ColorFullHP;
             _colorHalfHp = _brickData.ColorHalfHP;
         }
 
         _halfHpValue = _hp / 2;
 
-        if (_spriteFullHp) _sprite = _spriteFullHp;
+        if (_spriteFullHp) _sprite.sprite = _spriteFullHp;
         _sprite.color = _colorFullHp;
 
         // Disable sprites
@@ -104,7 +104,7 @@ public class Brick : MonoBehaviour
     {
         if (_hp <= _halfHpValue)
         {
-            if (_spriteHalfHp != null) _sprite = _spriteHalfHp;
+            if (_spriteHalfHp != null) _sprite.sprite = _spriteHalfHp;
             _sprite.color = _colorHalfHp;
         }
     }
