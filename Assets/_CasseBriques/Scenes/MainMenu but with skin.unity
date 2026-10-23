@@ -1855,6 +1855,10 @@ PrefabInstance:
       propertyPath: _showStuff
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4330268205669508862, guid: 8c0c5fe1234687a4eac8705ac259ebc2, type: 3}
+      propertyPath: sceneValue
+      value: LouiseScene
+      objectReference: {fileID: 0}
     - target: {fileID: 5509630493146751056, guid: 8c0c5fe1234687a4eac8705ac259ebc2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
