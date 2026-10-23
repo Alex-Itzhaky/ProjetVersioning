@@ -57,6 +57,5 @@ public class SceneLoader : MonoBehaviour
     {
         if (_showStuff != null) _showStuff.SetActive(true);
         if (_closeStuff != null) _closeStuff.SetActive(false);
-        Debug.Log("Show or hided");
     }
 }
