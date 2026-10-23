@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456b7081b6da90f42b9e7a535801d887, type: 3}
   m_Name: AgrandissementPlat
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpData
-  _icon: {fileID: 0}
+  _icon: {fileID: 6961749707979155268, guid: 56cd0f79e55158a4495456fc0786fa90, type: 3}
   _effect: {fileID: 11400000, guid: d08c1239e7072b64181259b6c78df0c1, type: 2}

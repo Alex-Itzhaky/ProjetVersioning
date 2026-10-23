@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456b7081b6da90f42b9e7a535801d887, type: 3}
   m_Name: TripleBalle
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpData
-  _icon: {fileID: 0}
+  _icon: {fileID: -5243344622342640327, guid: d63b8729bf1547342bd05d6716ea4bf5, type: 3}
   _effect: {fileID: 11400000, guid: 9fa57db99b125714e90d11f40b5780ba, type: 2}
