@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ScaleChanger : MonoBehaviour
 {
-    [MinValue(0)]
-    [SerializeField] private float _baseScale;
+    private float _baseScale;
     [MinValue(0)]
     [SerializeField] private float _scaleTransitionTime;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
 
     public float BaseScale => _baseScale;
-    private void Reset()
+    private void Start()
     {
-        _baseScale = 1f;
+        _baseScale = _spriteRenderer.size.x;
     }
 
     public void UpdateScale(float scale)
@@ -22,15 +22,14 @@ public class ScaleChanger : MonoBehaviour
 
     private IEnumerator UpdateScaleCoroutine(float scale)
     {
-        Vector3 startScale = transform.localScale;
+        Vector2 startScale = _spriteRenderer.size;
         float elapsedTime = 0f;
         while (elapsedTime < _scaleTransitionTime)
         {
-            transform.localScale = Vector3.Lerp(startScale, new Vector3(scale, 1, 1), elapsedTime/_scaleTransitionTime);
+            _spriteRenderer.size = Vector2.Lerp(startScale, new Vector2(scale, _spriteRenderer.size.y), elapsedTime/_scaleTransitionTime);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        transform.localScale = new Vector3(scale, 1, 1);
-        
+        _spriteRenderer.size = new Vector2(scale, _spriteRenderer.size.y);
     }
 }
