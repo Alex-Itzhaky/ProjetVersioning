@@ -174,10 +174,10 @@ MonoBehaviour:
   _ballData: {fileID: 0}
   _sprite: {fileID: 0}
   _color: {r: 1, g: 1, b: 1, a: 1}
-  _baseSpeed: 5
-  _maxSpeed: 16
+  _baseSpeed: 4
+  _maxSpeed: 9
   _damage: 1
-  _piercing: 1
+  _piercing: 0
   _startAngle: 40
 --- !u!114 &-4563673352612013093
 MonoBehaviour:
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe380a925cc4b3458be93dbd3e75e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallSpeedIncreaser
-  _hitAddSpeed: 0
+  _hitAddSpeed: 1
   _hitMultiplier: 1
 --- !u!114 &-9134530327050306129
 MonoBehaviour:

@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f309abc25e5ee704e86e219b6c65ef92, type: 3}
   m_Name: BigPlatform
   m_EditorClassIdentifier: Assembly-CSharp::BigPlatformEffect
-  duration: 0
-  _baseScale: 0
-  _bigScale: 0
+  _duration: 5
+  _bigScale: 2

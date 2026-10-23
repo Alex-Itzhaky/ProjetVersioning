@@ -92,6 +92,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpTrigger
   _platformTag: Platform
+  OnPowerUpPickup:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5763504954878090751
 GameObject:
   m_ObjectHideFlags: 0
