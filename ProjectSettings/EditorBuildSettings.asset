@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_CasseBriques/Scenes/MainMenu.unity
     guid: ee27ed328af9bd34b9efda97f9f4ec1c
-  - enabled: 1
+  - enabled: 0
     path: Assets/_CasseBriques/Scenes/LaurentScene.unity
     guid: ac4e54af9c3d73440a07e5ab224863b7
   - enabled: 1
     path: Assets/_CasseBriques/Scenes/LouiseScene.unity
     guid: da52b8e6dee4a034ab0880a8b8f45d4d
-  - enabled: 1
+  - enabled: 0
     path: Assets/_CasseBriques/Scenes/SecretScene.unity
     guid: 5292e374616b375499fe9937328f04c2
   m_configObjects:
