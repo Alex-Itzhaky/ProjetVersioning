@@ -25,6 +25,7 @@ public class ScreamerEffect : PowerUpEffect
         _screamerInstance = Instantiate(_screamerPrefab);
         _tween = _screamerInstance.transform.DOShakePosition(_duration, _strength, _vibrato, _randomness, _snapping, false, ShakeRandomnessMode.Full)
             .SetUpdate(true);
+        AudioManager.Instance.PlaySoundFXClip(_audioClip, 1f);
     }
 
     public override void RemoveEffect(PowerUpReferences references)

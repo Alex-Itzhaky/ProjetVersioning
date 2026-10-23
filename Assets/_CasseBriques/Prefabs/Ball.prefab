@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 222300635500572408}
   - component: {fileID: -4563673352612013093}
   - component: {fileID: -9134530327050306129}
+  - component: {fileID: 5597120610740413222}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -207,3 +208,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BallHp
   EnableHP: 0
   _hp: 1
+--- !u!114 &5597120610740413222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3004333880723670072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ad1f9bba5c09749b634764adc62d19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BallSounds
+  _collisionsSFX:
+  - {fileID: 8300000, guid: 9c9ea7cda689bb245b35f0ed06da0fc7, type: 3}
+  - {fileID: 8300000, guid: 1c8b064e718f69040b61af7f517a49a9, type: 3}
+  _volume: 0.8
+  _pitchVariance: 0.05
