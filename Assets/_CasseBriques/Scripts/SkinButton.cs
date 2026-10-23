@@ -9,10 +9,27 @@ public class SkinButton : MonoBehaviour
     [SerializeField] private const string NOT_SELECTED_TEXT = "SELECT";
     [SerializeField] private const string SELECTED_TEXT = "SELECTED!";
 
+    [SerializeField] private GameObject _selectedEffect;
+    [SerializeField] private GameObject _disableEffect;
+
+    void Start()
+    {
+        if (_selectedEffect != null) _selectedEffect.SetActive(false);
+        if (_disableEffect != null) _disableEffect.SetActive(false);
+    }
+
     public void SelectSkin()
     {
         BallSelect.SelectSkin(_skin);
         _thisText.text = SELECTED_TEXT;
         _otherText.text = NOT_SELECTED_TEXT;
+
+        SelectEffect();
+    }
+
+    public void SelectEffect()
+    {
+        if (_selectedEffect != null) _selectedEffect.SetActive(true);
+        if (_disableEffect != null) _disableEffect.SetActive(false);
     }
 }
