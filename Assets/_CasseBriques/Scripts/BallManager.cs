@@ -29,6 +29,7 @@ public class BallManager : MonoBehaviour
     {
         _ballRegistry.Remove(ball);
         Destroy(ball.gameObject);
+        Debug.Log(_ballRegistry.Count);
         if (_ballRegistry.Count == 0)
         {
             OnEmptyBallRegistry?.Invoke();
